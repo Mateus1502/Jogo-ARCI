@@ -23,6 +23,14 @@ public class cartas {
         int condicao2 = scanner.nextInt();
         //Esse scanner irá pegar a próxima linha em branco que iria fazer travar o operador(sofri aqui :( )
         scanner.nextLine();
+        if(condicao1!=0 && condicao1!=1 ){
+            System.out.println(RED+"Inválido"+RESET);
+            return;
+        }
+        if(condicao2!=0 && condicao2!=1){
+            System.out.println(RED+"Inválido"+RESET);
+            return;
+        }
         System.out.println("Agora informe o operador: ");
         String operador = scanner.nextLine();
         //Estou transformando as condições em booleanos para poder usar os operadores lógicos
@@ -47,7 +55,7 @@ public class cartas {
                 System.out.println("Você inseriu um valor inválido, favor verificar");
                 return;
         }
-        if(saida=false){
+        if(saida==false){
             System.out.println("Uma ferrari com asa é mais rápida");
         }else{
             System.out.println("GOAT = Sir Lewis Hamilton");
